@@ -1,0 +1,68 @@
+body{
+    font: Arial;
+    background-color: rgb(243, 241, 238);
+    justify-content: center;
+    display: flex;
+}
+#toggleMode{
+    background-color: rgb(92, 87, 87);
+    color: white;
+    padding:5px;
+    width: 150px;
+    border-radius: 20px;
+    margin: 0 10px 0 350px ;
+}
+
+.container{
+    width: 500px;
+    background-color: rgb(154, 142, 113, 30%);
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid rgb(154, 142, 113);
+    border-radius: 15px;
+    justify-self: center;
+    
+    #desc{width: 330px;}
+}
+h1,h2{margin-top: 0;}
+
+form input, button{
+    width: 460px;
+    padding: 10px;
+    margin: 5px 0;}
+form select{padding: 5px;}
+#submit{ 
+    background-color: rgb(224, 221, 221);
+    margin :15px;
+}
+
+h3{
+    margin-top:30px ;
+    margin-bottom:1px;
+}
+
+
+li {           /* list created in javascript*/
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 4px 8px;
+  list-style: none;               /* optional: removes default bullet */
+}
+
+li button{
+    width: 200px;
+}
+
+
+.dark1 {
+  background: #121212;
+  color: white;
+}
+
+.dark1 .container {
+  background: #1e1e1e;
+}
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="ETstyle.css">
+    <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <!--DARK MODE-->
+    <button id="toggleMode">Toggle Darkmode</button>
+    <!--TITLE & SCREEN DISPLAY-->
+    <h1>Expense Tracker</h1>
+    <h2>Balance: <span id="balance">0</span></h2>
+
+    <!--INPUT FORM-->
+    <form id="form">
+        <input type="number" id="amount" placeholder=" Enter (+income) or (-expense)" required>
+
+        <input type="text" id="desc" placeholder="Description" maxlength="25" required>
+        <span><select id="category">
+            <option selected>Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Bills">Bills</option>
+            <option value="Shopping">Shopping</option>
+        </select></span>
+        <button type="submit" id="submit">Add Transaction</button>
+    </form>
+    
+
+    <!--TRANSACTION LIST-->
+    <!--Search Transactions-->
+    <h3>Transactions:</h3>
+    <input type="text" id="search" placeholder="search transactions..."><!--to filter with transaction description-->
+        <select id="filterCategory"> <!--to filter categories--> 
+            <option value="All">All</option>
+            <option value="Food">Food</option> 
+            <option value="Travel">Travel</option>
+            <option value="Bills">Bills</option>
+            <option value="Shopping">Shopping</option>
+        </select>
+
+    <!--Transaction List-->
+    <ul id="list"></ul>
+
+    <!--SUMMARY-->
+    <div id="summary">
+        <h3>Summary:</h3>
+        <p>Income Total: <span id="incomeTotal">0</span></p>
+        <p>Expense Total: <span id="expenseTotal">0</span></p>
+    </div>
+
+    <!--CHART-->
+    <canvas id="myChart"></canvas>
+
+</div>
+
+<script src="ETscript.js"></script>
+    
+</body>
+</html>
