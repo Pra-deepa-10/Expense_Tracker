@@ -7,11 +7,12 @@ const balance = document.getElementById('balance');
 const toggleBtn = document.getElementById('toggleMode'); //for darkmode
 const search = document.getElementById('search'); //to search by letters
 const filterCategory = document.getElementById('filterCategory'); //tosearch filter category
-const incomeTotal = document.getElementById('incomeTotal'); //for summary
-const expenseTotal = document.getElementById('expenseTotal'); //for summary
+const incomeTotal = document.getElementById('incomeTotal'); 
+const expenseTotal = document.getElementById('expenseTotal'); 
+const resetbtn = document.getElementById('resetbtn')
 
 let transactions = JSON.parse(localStorage.getItem('transactions')) || []; //used to retrieve data from the browser’s local storage.
-//JSON is used to store data in browser as text. 
+//JSON is used to store data in browser as text.  JSON.parse converts text to js array or object again.
 //localStorage is a built-in 'browser object' to store data in browser.
 //setItem/getItem is used to store and retrieve data from browser.
 
@@ -32,7 +33,7 @@ form.addEventListener('submit', function(e) {
 
   updateLocalStorage(); //update
   init(); //initialize
-  form.reset(); //will clear data from display
+  form.reset(); //will clear data
 });
 
 // SHOW DATA
@@ -149,6 +150,17 @@ function init() {
   updateSummary();
 }
 
+//RESET
+resetbtn.addEventListener("click", function resetApp() {
+
+  // empty transactions array
+  transactions = [];
+
+  // clear local storage
+  localStorage.removeItem('transactions');
+
+  // rerender app
+  init();})
 
 search.addEventListener('input', init); //search
 filterCategory.addEventListener('change', init); //filtercategory

@@ -30,8 +30,11 @@ form input, button{
     width: 460px;
     padding: 10px;
     margin: 5px 0;}
+    
 form select{padding: 5px;}
-#submit{ 
+
+
+#submit, #resetbtn{ 
     background-color: rgb(224, 221, 221);
     margin :15px;
 }
